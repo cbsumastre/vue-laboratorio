@@ -12,11 +12,12 @@
 			},
 			"extensions": [
 				"Vue.volar",
-                "vitest.explorer",
-                "dbaeumer.vscode-eslint",
-                "EditorConfig.EditorConfig",
-                "esbenp.prettier-vscode",
-                "ms-vscode.vscode-typescript-next"
+				"vitest.explorer",
+				"dbaeumer.vscode-eslint",
+				"EditorConfig.EditorConfig",
+				"esbenp.prettier-vscode",
+				"ms-vscode.vscode-typescript-next",
+				"hollowtree.vue-snippets"
 			]
 		}
     },
