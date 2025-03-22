@@ -18,7 +18,9 @@
 				"esbenp.prettier-vscode",
 				"ms-vscode.vscode-typescript-next",
 				"hollowtree.vue-snippets",
-				"eamodio.gitlens"
+				"eamodio.gitlens",
+				"wix.vscode-import-cost",
+				"aaron-bond.better-comments"
 			]
 		}
     },
