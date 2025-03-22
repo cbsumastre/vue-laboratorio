@@ -17,7 +17,8 @@
 				"EditorConfig.EditorConfig",
 				"esbenp.prettier-vscode",
 				"ms-vscode.vscode-typescript-next",
-				"hollowtree.vue-snippets"
+				"hollowtree.vue-snippets",
+				"eamodio.gitlens"
 			]
 		}
     },
