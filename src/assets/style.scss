@@ -77,13 +77,6 @@ body {
         color: $color-white;
       }
     }
-
-    input[type='text'] {
-      padding: 8px 12px;
-      margin: 0 5px;
-      border: 1px solid $border-color;
-      border-radius: 4px;
-    }
   }
 
   .taskList {
@@ -140,13 +133,7 @@ body {
   }
 }
 
-@media (max-width: 768px) {
-  .container {
-    width: 85%;
-  }
-}
-
-@media (max-width: 480px) {
+@media (max-width: 580px) {
   .container {
     width: 100%;
     padding: 10px;
@@ -157,6 +144,18 @@ body {
       button {
         margin-left: 0;
         margin-top: 5px;
+      }
+    }
+
+    .search {
+      input[type='text'] {
+        flex: 1;
+      }
+    }
+
+    .filters {
+      button {
+        width: 100%;
       }
     }
   }
