@@ -25,11 +25,8 @@ export const useLocalStorage = (): Storage => {
       } else {
         saveTasksInLocalStorage(tasks)
       }
-      const sortedTasks:Task[]=tasks.sort((a, b) => {
-        return a.ts.getTime() - b.ts.getTime();
-      });
 
-      resolve(sortedTasks)
+      resolve(tasks)
     })
   }
 
