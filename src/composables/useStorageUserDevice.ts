@@ -1,7 +1,8 @@
+import type { Storage } from '@/types'
 // import { useLocalStorage as useStorage } from './useLocalStorage'
 import {  useTasksDB as useStorage } from './useIndexedDB'
 
-export const useStorageUserDevice = () => {
+export const useStorageUserDevice = (): Storage => {
   const {
     initFromUserStorage,
     getTasksFromUserStorage,

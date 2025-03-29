@@ -1,9 +1,9 @@
-import type { Task } from '@/types'
+import type { Task, Storage } from '@/types'
 import { ref } from 'vue'
 
 const databaseName = 'todo-app-vue-database'
 
-export const useTasksDB = () => {
+export const useTasksDB = (): Storage => {
   const tasks = ref<Task[]>([])
   const db = ref<IDBDatabase | undefined>(undefined)
 
@@ -45,8 +45,11 @@ export const useTasksDB = () => {
 
       request.onsuccess = (event: Event) => {
         const tasks = (event.target as IDBRequest<Task[]>).result
-        console.log('getTasksFromDB onsuccess ', tasks)
-        resolve(tasks)
+        const sortedTasks:Task[]=tasks.sort((a, b) => {
+          return a.ts.getTime() - b.ts.getTime();
+        });
+        console.log('getTasksFromDB onsuccess ', sortedTasks)
+        resolve(sortedTasks)
       }
 
       request.onerror = (event: Event) => {

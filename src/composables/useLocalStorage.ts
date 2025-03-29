@@ -1,8 +1,8 @@
-import type { Task } from '@/types'
+import type { Task, Storage } from '@/types'
 
 const keyStorage = 'todo-app-vue-storage'
 
-export const useLocalStorage = () => {
+export const useLocalStorage = (): Storage => {
   const initStorage = async () => {
     return new Promise<void>((resolve) => {
       if (!localStorage.getItem(keyStorage)) {
@@ -25,7 +25,11 @@ export const useLocalStorage = () => {
       } else {
         saveTasksInLocalStorage(tasks)
       }
-      resolve(tasks)
+      const sortedTasks:Task[]=tasks.sort((a, b) => {
+        return a.ts.getTime() - b.ts.getTime();
+      });
+
+      resolve(sortedTasks)
     })
   }
 
