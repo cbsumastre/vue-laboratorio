@@ -54,3 +54,23 @@ las tareas se mantengan incluso después de recargar la página o cerrar y abrir
 
 Las funcionalidades adicionales son opcionales y no es necesario implementarlas todas. Se puede añadir algunas de ellas o cualquier otra que se os ocurra.
 
+##  Instrucciones
+| Instrucción               |                                                                         |
+| :------------------------ | :---------------------------------------------------------------------- |
+| `npm install`             | Instala las dependencias                                                |
+| `npm run dev`             | Inicia el servidor de desarrollo en `http://localhost:5173/`            |
+| `npm run build`           | Construye el proyecto en el directorio dist                             | 
+
+## Cambiar storage
+
+Para cambiar el storage local (localStorage o IndexedDB) en **src/composables/useStorageUserDevice.ts**:
+
+ - Si quieres usar localStorage: 
+    ```ts
+    import { useLocalStorage as useStorage } from './useLocalStorage'
+    ```
+ - Si prefieres usar IndexedDB: 
+    ```ts
+    import {  useTasksDB as useStorage } from './useIndexedDB'
+    ```
+
