@@ -61,6 +61,24 @@ Las funcionalidades adicionales son opcionales y no es necesario implementarlas 
 | `npm run dev`             | Inicia el servidor de desarrollo en `http://localhost:5173/`            |
 | `npm run build`           | Construye el proyecto en el directorio dist                             | 
 
+## Cambiar tema
+Para cambiar el theme de la aplicación en **src/assets/style.scss**:
+
+-  Tema 1: 
+```scss
+   @use 'themes/theme1.scss' as *;
+```
+-  Tema 2: 
+```scss
+   @use 'themes/theme2.scss' as *;
+```
+
+-  Tema 3: 
+```scss
+   @use 'themes/theme3.scss' as *;
+```
+
+
 ## Cambiar storage
 
 Para cambiar el storage local (localStorage o IndexedDB) en **src/composables/useStorageUserDevice.ts**:
