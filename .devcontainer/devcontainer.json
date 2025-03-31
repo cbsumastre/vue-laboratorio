@@ -1,0 +1,33 @@
+{
+	"name": "Vue Laboratorio",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": "."
+    },
+    "customizations": {
+        "vscode": {
+			"settings": {
+				"terminal.integrated.defaultProfile.linux": "bash",
+				"editor.insertSpaces": true
+			},
+			"extensions": [
+				"Vue.volar",
+				"vitest.explorer",
+				"dbaeumer.vscode-eslint",
+				"EditorConfig.EditorConfig",
+				"esbenp.prettier-vscode",
+				"ms-vscode.vscode-typescript-next",
+				"hollowtree.vue-snippets",
+				"eamodio.gitlens",
+				"wix.vscode-import-cost",
+				"aaron-bond.better-comments"
+			]
+		}
+    },
+    "mounts": [
+        "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
+    ],
+    "remoteUser": "vscode",
+    "postCreateCommand": "bash ./.devcontainer/scripts/install-nvm.sh",
+    "shutdownAction": "stopContainer"
+} 
